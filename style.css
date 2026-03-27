@@ -1,0 +1,278 @@
+:root {
+  --bg: #ffffff;
+  --card: #ffffff;
+  --text: #111111;
+  --muted: #6e6e73;
+  --border: #e5e5e5;
+  --primary: #000000;
+  --accent: #0066cc;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--bg);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  line-height: 1.4; /* Slightly tighter line height */
+}
+
+/* HEADER - Tightened vertical spacing */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: saturate(180%) blur(20px);
+  background: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px; /* Reduced from 16px 20px */
+  max-width: 1200px;
+  margin: auto;
+  gap: 8px; /* Reduced from 16px */
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.1rem; /* Slightly smaller for mobile */
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #000;
+  text-decoration: none;
+}
+
+.logo .light {
+  font-weight: 400;
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+.logo .india {
+  font-size: 0.6rem;
+  font-weight: 700;
+  background: #000;
+  color: #fff;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+/* SEARCH BOX - More compact */
+.search-container {
+  width: 100%;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f5f5f7;
+  border-radius: 8px;
+  padding: 6px 12px; /* Reduced from 8px 14px */
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.search-box:focus-within {
+  background: #fff;
+  border-color: #0066cc;
+}
+
+.search-icon {
+  font-size: 0.8rem;
+  margin-right: 6px;
+  opacity: 0.5;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.9rem;
+  background: transparent;
+  color: var(--text);
+}
+
+/* MAIN CONTENT - Removed top gap */
+.main {
+  padding: 10px 10px; /* Reduced from 20px 10px */
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-header {
+  margin-bottom: 15px; /* Reduced from 30px */
+}
+
+.title {
+  font-size: 1.4rem; /* Smaller, punchier title */
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px; /* Tighter gap between products */
+}
+
+/* CARD */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px); /* Professional subtle lift */
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #fbfbfd;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  color: #000;
+  font-size: 9px;
+  padding: 3px 7px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* CARD INFO - Cleaned up spacing */
+.info {
+  padding: 10px 4px 5px; /* Tighter padding */
+}
+
+.info h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Prevents long names from breaking layout */
+}
+
+.info p {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+.price {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #000;
+}
+
+.buy-btn {
+  margin-top: 5px;
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+/* FOOTER */
+.footer {
+  background: #f5f5f7;
+  padding: 40px 20px;
+  margin-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.footer-disclosure {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: var(--muted);
+  border-top: 1px solid #e5e5e5;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-copyright {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+  }
+  .search-container {
+    width: 300px;
+  }
+  .main {
+    padding: 20px 20px;
+  }
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .title { font-size: 1.8rem; }
+  .info h3 { font-size: 1rem; }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
