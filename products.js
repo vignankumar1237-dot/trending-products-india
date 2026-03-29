@@ -5,7 +5,7 @@ const products = [
     category: "Trending Now",
     price: "₹3698",
     image: "images/71jR2weaoAL._SL1500_.jpg",
-    link: "https://amzn.to/4sDajuU"
+    link: "https://amzn.to/4vglaNp"
   },
   {
     id: 1,
