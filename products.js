@@ -1,10 +1,10 @@
 const products = [
   {
     id: 1,
-    title: "OWNAIR 2 in 1 Handheld Steam Iron",
+    title: "CRAFTEL Metal Analog Double Sided Vintage Station Wall Clock with Brass in dial",
     category: "Trending Now",
-    price: "₹3698",
-    image: "images/71jR2weaoAL._SL1500_.jpg",
+    price: "₹2,169",
+    image: "images/814UjO6wrKL._SL1500_.jpg",
     link: "https://amzn.to/4vglaNp"
   },
   {
